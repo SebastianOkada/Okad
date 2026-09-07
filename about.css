@@ -1,0 +1,1634 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAF8F5;
+    color: #2F2F2F;
+    font-family: "Lora", serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+
+/* ===========================
+   Header
+=========================== */
+
+header {
+    height: 65px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: #FAF8F5;
+}
+
+nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(20px);
+    position: relative;
+    z-index: 1000;
+}
+
+/* Logo */
+
+.logo a {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #2F2F2F;
+}
+
+
+/* Navigation Links */
+
+nav ul {
+    display: flex;
+    gap: 55px;
+}
+/* Dropdown Menu */
+
+.nav-item {
+    position: relative;
+}
+.nav-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 30px;
+}
+.dropdown {
+    position: absolute;
+    top: 45px;
+    left: 0;
+
+    background: #FAF8F5;
+    padding: 25px 35px;
+
+    min-width: 220px;
+
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    z-index: 10;
+}
+
+.dropdown a {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #2F2F2F;
+    white-space: nowrap;
+
+    transition: color 0.3s ease;
+}
+
+.dropdown a:hover {
+    color: #B89D87;
+}
+
+.nav-item:hover .dropdown {
+    display: flex;
+}
+nav ul a {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    color: #2F2F2F;
+    text-transform: uppercase;
+}
+
+nav ul a:hover {
+    color: #B89D87;
+}
+
+
+/* Search & Profile */
+
+.nav-icons {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-icons a {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+}
+nav a:hover {
+    color: #B89D87;
+}
+/* SVG Icons */
+
+.nav-icons svg {
+    width: 22px;
+    height: 22px;
+    stroke: #2F2F2F;
+    transition: 0.3s ease;
+}
+
+.nav-icons a:hover svg {
+    stroke: #B89D87;
+}
+
+
+
+
+
+
+
+/* =========================
+   About Hero
+========================= */
+
+.about-hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:70vh;
+
+    margin-top:100px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.about-hero img{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.about-hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(33,27,22,0.45);
+
+    z-index:1;
+
+}
+
+.about-hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+    text-align:center;
+
+    padding:0 20px;
+
+}
+
+.about-hero-content h1{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:68px;
+
+    font-weight:600;
+
+    line-height:1.1;
+
+    color:#F6F1E8 !important;
+
+}
+
+
+
+
+
+/* =========================
+   Why OKAD
+========================= */
+
+.about-intro{
+
+    padding:100px 20px;
+
+}
+
+.about-intro-container{
+
+    max-width:850px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+.about-tagline{
+
+    font-family:"Inter", sans-serif;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:0.35em;
+
+    text-transform:uppercase;
+
+    color:#B89D87;
+
+    margin-bottom:30px;
+
+}
+
+.about-description{
+
+    font-family:"Lora", serif;
+
+    font-size:22px;
+
+    line-height:1.9;
+
+    color:#272727;
+
+}
+
+.about-description strong{
+
+    font-weight:600;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   Editorial Values
+========================= */
+
+.editorial-values{
+
+    padding:0 20px 40px;
+
+}
+
+.editorial-grid{
+
+    max-width:1200px;
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.editorial-card{
+
+    background:#F8F7F4;
+
+    border:1px solid #DDD6CC;
+
+    border-radius:16px;
+
+    padding:45px 35px;
+
+    text-align:center;
+
+    transition:0.3s ease;
+
+}
+
+.editorial-card:hover{
+
+    border-color:#B89D87;
+
+    transform:translateY(-5px);
+
+}
+
+.editorial-icon{
+
+    width:62px;
+
+    height:62px;
+
+    margin:0 auto 28px;
+
+    border:1px solid #D8D2C8;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#B89D87;
+
+    font-size:24px;
+
+}
+
+.editorial-card h3{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:32px;
+
+    font-weight:500;
+
+    letter-spacing:0.02em;
+
+    line-height:1.2;
+
+    color:#272727;
+
+    margin-bottom:18px;
+
+}
+
+.editorial-card p{
+
+    font-family:"Lora", serif;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#5C5C5C;
+
+}
+
+@media (max-width:900px){
+
+    .editorial-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+   Little Details Matter
+========================= */
+
+.details-section{
+
+    padding:60px 20px;
+
+    background:#F8F7F4;
+
+}
+
+.details-container{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+.details-container h2{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:64px;
+
+    font-weight:500;
+
+    letter-spacing:0.03em;
+
+    line-height:1.2;
+
+    color:#B89D87;
+
+    margin-bottom:35px;
+
+}
+
+.details-container p{
+
+    font-family:"Lora", serif;
+
+    font-size:22px;
+
+    line-height:1.9;
+
+    color:#272727;
+
+    max-width:780px;
+
+    margin:0 auto;
+
+}
+
+@media(max-width:768px){
+
+    .details-container h2{
+
+        font-size:42px;
+
+    }
+
+    .details-container p{
+
+        font-size:18px;
+
+    }
+
+}
+
+
+
+
+
+
+/* =========================
+   Thank You Section
+========================= */
+
+.about-thankyou{
+
+       padding:40px 20px 40px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+.thankyou-note{
+
+    width:100%;
+
+    max-width:520px;
+
+    background:#E8DED2;
+
+    padding:45px 55px;
+
+    text-align:center;
+
+    position:relative;
+
+    border-radius:80px 25px 70px 30px;
+
+    transform:rotate(-1deg);
+
+}
+
+
+/* small brand mark */
+
+.thankyou-small{
+
+    font-family:"Inter", sans-serif;
+
+    font-size:12px;
+
+    letter-spacing:0.45em;
+
+    color:#A98A70;
+
+    display:block;
+
+    margin-bottom:20px;
+
+}
+
+
+/* heading */
+
+.thankyou-note h2{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:38px;
+
+    font-weight:500;
+
+    line-height:1.2;
+
+    color:#272727;
+
+    margin-bottom:15px;
+
+}
+
+
+/* text */
+
+.thankyou-note p{
+
+    font-family:"Lora", serif;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    color:#5C5C5C;
+
+    margin:0;
+
+}
+
+
+/* organic soft detail */
+
+.thankyou-note::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:18px;
+
+    height:18px;
+
+    background:#B89D87;
+
+    border-radius:50%;
+
+    top:25px;
+
+    right:35px;
+
+    opacity:0.5;
+
+}
+
+
+@media(max-width:768px){
+
+    .thankyou-note{
+
+        padding:40px 25px;
+
+    }
+
+
+    .thankyou-note h2{
+
+        font-size:32px;
+
+    }
+
+}
+
+
+/* Footer Social Icons */
+
+.social-icons {
+    display: flex;
+    gap: 18px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Pinterest */
+.social-icons a:nth-child(1) svg {
+    fill: #E60023;
+}
+
+/* Instagram */
+.social-icons a:nth-child(2) svg {
+    color: #C13584;
+}
+
+/* YouTube */
+.social-icons a:nth-child(3) svg {
+    color: #FF0000;
+}
+
+/* Hover */
+
+.social-icons a:hover svg {
+    transform: scale(1.12);
+    opacity: 0.8;
+}
+/* ===================================
+   Footer
+=================================== */
+
+footer {
+    background-color: #2F2F2F;
+    padding: 90px 0 50px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+
+/* Footer Logo */
+
+.footer-logo h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 44px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: #FAF8F5;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    max-width: 380px;
+    margin: 0 auto;
+
+    font-family: "Lora", serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #D8D2C8;
+}
+
+
+/* Footer Links */
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin: 30px 0;
+}
+
+.footer-links a {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: #FAF8F5;
+
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #B89D87;
+}
+
+
+/* Social */
+
+.footer-social p {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #D8D2C8;
+}
+
+
+/* Social Icons */
+
+.social-icons {
+    justify-content: center;
+}
+
+
+/* Copyright */
+
+.copyright {
+    margin-top: 30px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    color: #B8B1A8;
+}
+
+
+/* Back To Top */
+
+.back-top {
+    margin-top: 20px;
+
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid #B89D87;
+
+    color: #B89D87;
+}
+
+.back-top:hover {
+    background-color: #B89D87;
+    color: #2F2F2F;
+}
+/* Journal Wrapper */
+
+.journal-wrapper {
+    position: relative;
+}
+
+
+/* Back To Top */
+
+.back-top {
+    position: absolute;
+
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(184,157,135,0.5);
+
+    color: #B89D87;
+
+    font-size: 18px;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.back-top:hover {
+    background-color: #B89D87;
+    color: #FAF8F5;
+
+    transform: translateY(-50%) scale(1.08);
+}
+/* ===================================
+   Newsletter Popup
+=================================== */
+
+.newsletter-popup {
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(47,47,47,0.45);
+    backdrop-filter: blur(6px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+
+    z-index: 9999;
+}
+
+/* Active State */
+
+.newsletter-popup.active {
+
+    opacity: 1;
+    visibility: visible;
+
+}
+
+/* Popup Card */
+
+.newsletter-content {
+
+    position: relative;
+
+    width: 90%;
+    max-width: 520px;
+
+    background: #FAF8F5;
+
+    border-radius: 10px;
+
+    padding: 55px 50px;
+
+    text-align: center;
+
+    box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+
+    transform: translateY(20px);
+
+    transition: transform .35s ease;
+
+}
+
+.newsletter-popup.active .newsletter-content {
+
+    transform: translateY(0);
+
+}
+
+/* Logo */
+
+.newsletter-logo img{
+
+    width:90px;
+
+    margin:0 auto 22px;
+
+}
+
+/* Tagline */
+
+.newsletter-tagline{
+
+    font-family:"Inter",sans-serif;
+
+    font-size:12px;
+
+    letter-spacing:.25em;
+
+    text-transform:uppercase;
+
+    color:#B89D87;
+
+    margin-bottom:18px;
+
+}
+
+/* Title */
+
+.newsletter-content h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:46px;
+
+    font-weight:400;
+
+    color:#2F2F2F;
+
+    margin-bottom:18px;
+
+}
+
+/* Description */
+
+.newsletter-text{
+
+    font-family:"Lora",serif;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    color:#6E675F;
+
+    margin-bottom:35px;
+
+}
+
+/* Email */
+
+.newsletter-form input{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border:1px solid #D8D2C8;
+
+    background:#FFFFFF;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:14px;
+
+    margin-bottom:18px;
+
+    outline:none;
+
+}
+
+.newsletter-form input:focus{
+
+    border-color:#B89D87;
+
+}
+
+/* Button */
+
+.newsletter-form button{
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    background:#A98A70;
+
+    color:#FFFFFF;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+}
+
+.newsletter-form button:hover{
+
+    background:#947761;
+
+}
+
+/* Bottom Note */
+
+.newsletter-note{
+
+    margin-top:22px;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:12px;
+
+    color:#8A837A;
+
+}
+
+/* Close */
+
+.close-popup{
+
+    position:absolute;
+
+    top:18px;
+
+    right:20px;
+
+    border:none;
+
+    background:none;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    color:#B89D87;
+
+    transition:.3s ease;
+
+}
+
+.close-popup:hover{
+
+    color:#2F2F2F;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   About Page
+========================= */
+
+
+/* Hero */
+
+.about-hero {
+    text-align: center;
+    padding: 100px 0 60px;
+}
+
+
+.about-hero .section-label {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #B89D87;
+    margin-bottom: 30px;
+}
+
+
+.about-hero h1 {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 64px;
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    color: #2F2F2F;
+}
+
+
+
+/* Image Space */
+
+.about-brand-image {
+
+    padding: 40px 0 90px;
+
+}
+
+
+.about-image-box {
+
+    width: 100%;
+
+    height: 520px;
+
+    overflow: hidden;
+
+}
+
+
+.about-image-box img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+
+/* Story */
+
+
+.about-story {
+
+    text-align: center;
+
+    padding: 80px 0;
+
+}
+
+
+.about-story .container {
+
+    max-width: 760px;
+
+}
+
+
+.about-story h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 46px;
+
+    font-weight: 400;
+
+    color: #2F2F2F;
+
+    margin-bottom: 35px;
+
+}
+
+
+.about-story p {
+
+    font-family: "Lora", serif;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #6E675F;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+
+/* Values */
+
+
+.values-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 35px;
+
+    margin-top: 50px;
+
+}
+
+
+.values-grid div {
+
+    background: #FFFFFF;
+
+    padding: 35px;
+
+    text-align: center;
+
+}
+
+
+
+.values-grid h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 28px;
+
+    font-weight: 400;
+
+    color: #2F2F2F;
+
+    margin-bottom: 15px;
+
+}
+
+
+.values-grid p {
+
+    font-family: "Lora", serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #6E675F;
+
+}
+
+
+
+
+/* Closing */
+
+
+.about-closing {
+
+    text-align: center;
+
+    padding: 90px 0 120px;
+
+}
+
+
+.about-closing h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 52px;
+
+    font-weight: 400;
+
+    color: #B89D87;
+
+    margin-bottom: 25px;
+
+}
+
+
+.about-closing p {
+
+    max-width: 600px;
+
+    margin: 0 auto 15px;
+
+    font-family: "Lora", serif;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #6E675F;
+
+}
+
+
+
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES (About Page)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. LARGE DESKTOPS & LAPTOPS (Max-width: 1200px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+
+  .container {
+    padding: 0 40px;
+  }
+
+  nav ul {
+    gap: 35px;
+  }
+
+  .about-hero-content h1,
+  .about-hero h1 {
+    font-size: 56px;
+  }
+
+  .editorial-grid {
+    gap: 20px;
+  }
+
+  .editorial-card {
+    padding: 35px 25px;
+  }
+
+  /* Back to Top Button positioning adjustment */
+  .back-top {
+    right: -20px;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   2. TABLETS & SMALL LAPTOPS (Max-width: 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+
+  header {
+    height: auto;
+  }
+
+  nav {
+    transform: none;
+    padding: 20px 0;
+  }
+
+  nav ul {
+    gap: 25px;
+  }
+
+  .about-hero {
+    height: 50vh;
+    min-height: 400px;
+    margin-top: 40px;
+  }
+
+  .about-hero-content h1,
+  .about-hero h1 {
+    font-size: 48px;
+  }
+
+  .about-intro {
+    padding: 70px 20px;
+  }
+
+  .about-description {
+    font-size: 20px;
+  }
+
+  .editorial-grid,
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .details-container h2 {
+    font-size: 52px;
+  }
+
+  .about-closing h2 {
+    font-size: 44px;
+  }
+
+  .journal-wrapper .back-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    top: auto;
+    transform: none;
+    z-index: 99;
+  }
+
+  .journal-wrapper .back-top:hover {
+    transform: scale(1.08);
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   3. MOBILE PHONES & PORTRAIT TABLETS (Max-width: 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+
+  .container {
+    padding: 0 20px;
+  }
+
+  /* Navigation Layout */
+  nav {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 20px;
+  }
+
+  .dropdown {
+    position: static;
+    display: none;
+    box-shadow: none;
+    padding: 15px 0 0 0;
+    min-width: auto;
+    background: transparent;
+  }
+
+  .logo a {
+    font-size: 38px;
+  }
+
+  /* Hero Section */
+  .about-hero {
+    height: 45vh;
+    min-height: 350px;
+    margin-top: 20px;
+    padding: 60px 0 40px;
+  }
+
+  .about-hero-content h1,
+  .about-hero h1 {
+    font-size: 36px;
+  }
+
+  .about-brand-image {
+    padding: 20px 0 50px;
+  }
+
+  .about-image-box {
+    height: 320px;
+  }
+
+  /* Intro & Content */
+  .about-intro {
+    padding: 50px 20px;
+  }
+
+  .about-tagline {
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    margin-bottom: 20px;
+  }
+
+  .about-description {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  /* Editorial & Values Grids */
+  .editorial-values {
+    padding: 0 15px 30px;
+  }
+
+  .editorial-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .editorial-card {
+    padding: 30px 20px;
+  }
+
+  .editorial-card h3 {
+    font-size: 28px;
+  }
+
+  .editorial-card p {
+    font-size: 15px;
+  }
+
+  /* Details Section */
+  .details-section {
+    padding: 40px 20px;
+  }
+
+  .details-container h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .details-container p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* Story Section */
+  .about-story {
+    padding: 50px 0;
+  }
+
+  .about-story h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+
+  .about-story p {
+    font-size: 15px;
+  }
+
+  /* Thank You Card */
+  .about-thankyou {
+    padding: 30px 15px;
+  }
+
+  .thankyou-note {
+    padding: 35px 25px;
+    border-radius: 40px 20px 35px 20px;
+    transform: rotate(0deg);
+  }
+
+  .thankyou-note h2 {
+    font-size: 28px;
+  }
+
+  .thankyou-note p {
+    font-size: 16px;
+  }
+
+  /* Closing Section */
+  .about-closing {
+    padding: 50px 0 70px;
+  }
+
+  .about-closing h2 {
+    font-size: 36px;
+  }
+
+  .about-closing p {
+    font-size: 15px;
+  }
+
+  /* Newsletter Popup */
+  .newsletter-content {
+    width: 92%;
+    padding: 40px 20px;
+  }
+
+  .newsletter-content h2 {
+    font-size: 32px;
+  }
+
+  .newsletter-text {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 60px 0 40px;
+    margin-top: 50px;
+  }
+
+  .footer-logo h2 {
+    font-size: 36px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   4. EXTRA SMALL MOBILE SCREENS (Max-width: 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+
+  .logo a {
+    font-size: 32px;
+  }
+
+  .about-hero-content h1,
+  .about-hero h1 {
+    font-size: 30px;
+  }
+
+  .about-description {
+    font-size: 16px;
+  }
+
+  .about-image-box {
+    height: 240px;
+  }
+
+  .details-container h2 {
+    font-size: 30px;
+  }
+
+  .thankyou-note h2 {
+    font-size: 24px;
+  }
+
+  .newsletter-content h2 {
+    font-size: 26px;
+  }
+}

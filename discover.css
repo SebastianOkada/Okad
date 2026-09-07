@@ -1,0 +1,2054 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAF8F5;
+    color: #2F2F2F;
+    font-family: "Lora", serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+
+/* ===========================
+   Header
+=========================== */
+
+header {
+    height: 65px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: #FAF8F5;
+}
+
+nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(20px);
+    position: relative;
+    z-index: 1000;
+}
+
+/* Logo */
+
+.logo a {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #2F2F2F;
+}
+
+
+/* Navigation Links */
+
+nav ul {
+    display: flex;
+    gap: 55px;
+}
+/* Dropdown Menu */
+
+.nav-item {
+    position: relative;
+}
+.nav-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 30px;
+}
+.dropdown {
+    position: absolute;
+    top: 45px;
+    left: 0;
+
+    background: #FAF8F5;
+    padding: 25px 35px;
+
+    min-width: 220px;
+
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    z-index: 10;
+}
+
+.dropdown a {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #2F2F2F;
+    white-space: nowrap;
+
+    transition: color 0.3s ease;
+}
+
+.dropdown a:hover {
+    color: #B89D87;
+}
+
+.nav-item:hover .dropdown {
+    display: flex;
+}
+nav ul a {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    color: #2F2F2F;
+    text-transform: uppercase;
+}
+
+nav ul a:hover {
+    color: #B89D87;
+}
+
+
+/* Search & Profile */
+
+.nav-icons {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-icons a {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+}
+nav a:hover {
+    color: #B89D87;
+}
+/* SVG Icons */
+
+.nav-icons svg {
+    width: 22px;
+    height: 22px;
+    stroke: #2F2F2F;
+    transition: 0.3s ease;
+}
+
+.nav-icons a:hover svg {
+    stroke: #B89D87;
+}
+
+
+
+
+/* ===========================
+
+   Discover Hero
+
+=========================== */
+
+
+
+.discover-hero{
+
+
+
+    margin-top:100px;
+
+
+
+    height:70vh;
+
+
+
+    position:relative;
+
+
+
+    background:url("discover-assets/discover-banner.jpg") center/cover no-repeat;
+
+
+
+}
+
+
+
+.discover-hero::before{
+
+
+
+    content:"";
+
+
+
+    position:absolute;
+
+
+
+    inset:0;
+
+
+
+    background:
+
+        linear-gradient(
+
+            to left,
+
+            rgba(39,39,39,.75),
+
+            rgba(39,39,39,.35),
+
+            transparent
+
+        );
+
+
+
+}
+
+/* ===========================
+
+   Discover Hero Layout
+
+=========================== */
+
+
+
+.discover-hero-overlay{
+
+
+
+    height:100%;
+
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:space-between;
+
+
+
+    padding:0 80px;
+
+
+
+}
+
+
+
+
+
+.discover-hero-content{
+
+
+
+    width:90%;
+
+
+
+    margin-right:40px;
+
+
+
+     transform:translateY(-5px);
+
+
+
+}
+
+.discover-tagline{
+
+
+
+    font-family:"Inter", sans-serif;
+
+
+
+    font-size:15px;
+
+
+
+    font-weight:400;
+
+
+
+    letter-spacing:0.20em;
+
+
+
+    color:#D8D2C8;
+
+
+
+    text-transform:uppercase;
+
+
+
+    white-space:nowrap;
+
+
+
+    margin-bottom:35px;
+
+
+
+   transform:translate(90px, 165px);
+
+}
+
+
+
+/* Main title - Right side */
+
+
+
+.discover-hero h1{
+
+
+
+    font-family:"Cormorant Garamond",serif;
+
+
+
+    font-size:68px;
+
+
+
+    font-weight:400;
+
+
+
+    line-height:1.1;
+
+
+
+    color:#FFFFFF;
+
+
+
+    margin-bottom:24px;
+
+
+
+    text-align:right;
+
+
+
+} 
+
+
+
+
+
+
+/* ===========================
+   Editorial Articles
+=========================== */
+
+/* =========================
+   Editorial Section
+========================= */
+
+.editorial-section{
+
+    padding:40px 40px;
+
+}
+
+
+/* Editorial Layout */
+
+.editorial-article{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+
+
+/* Image */
+
+.article-image{
+
+    flex:1;
+
+}
+
+
+.article-image img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    display:block;
+
+    border-radius:12px;
+
+}
+
+
+
+/* Content */
+
+.article-content{
+
+    flex:1;
+
+    max-width:620px;
+
+}
+
+
+
+/* Category */
+
+.article-category{
+
+    display:inline-block;
+
+    margin-bottom:22px;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:12px;
+
+    font-weight:500;
+
+    letter-spacing:.3em;
+
+    text-transform:uppercase;
+
+    color:#B89D87;
+
+}
+
+
+
+/* Title */
+
+.article-content h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:34px;
+
+    font-weight:400;
+
+    line-height:1.15;
+
+    color:#272727;
+
+    margin-bottom:28px;
+
+}
+
+
+
+/* Description */
+
+.article-excerpt{
+
+    font-family:"Lora",serif;
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:#6E675F;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/* Date */
+
+.article-date{
+
+    font-family:"Inter",sans-serif;
+
+    font-size:12px;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    color:#8A837A;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* Button */
+
+.btn-primary{
+
+    display:inline-block;
+
+    padding:14px 32px;
+
+    background:#B89D87;
+
+    color:#ffffff;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:13px;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    transition:.3s ease;
+
+}
+
+
+.btn-primary:hover{
+
+    background:#272727;
+
+}
+
+
+/* Reverse Editorial Layout */
+
+.editorial-article.reverse{
+
+    flex-direction:row-reverse;
+
+}
+.editorial-article:not(.reverse) .article-content{
+
+    padding-left:80px;
+
+}
+
+.editorial-article.reverse .article-content{
+
+    padding-right:80px;
+
+}
+
+
+
+/* Clickable Article Image */
+
+.article-image a{
+
+    display:block;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+
+}
+
+.article-image a::after{
+
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(184,157,135,0.20),
+        rgba(248,247,244,0.05)
+    );
+
+    opacity:0;
+    transition:opacity .35s ease;
+
+}
+
+.article-image a:hover::after{
+
+    opacity:1;
+
+}
+
+.article-image img{
+
+    display:block;
+    width:100%;
+    transition:transform .45s ease;
+
+}
+
+.article-image a:hover img{
+
+    transform:scale(1.03);
+
+}
+
+
+
+
+/* ===========================
+   Pagination
+=========================== */
+
+.pagination-section{
+
+    padding:50px 40px 80px;
+
+}
+
+.pagination{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    font-family:"Inter",sans-serif;
+
+}
+
+.page-link,
+.page-number,
+.page-dots{
+
+    font-size:14px;
+
+    color:#6E675F;
+
+    text-decoration:none;
+
+    transition:.3s ease;
+
+}
+
+.page-number{
+
+    width:40px;
+
+    height:40px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+}
+
+.page-number.active{
+
+    background:#B89D87;
+
+    color:#ffffff;
+
+}
+
+.page-number:hover,
+.page-link:hover{
+
+    color:#B89D87;
+
+}
+
+.page-link.disabled{
+
+    opacity:.4;
+
+    pointer-events:none;
+
+}
+
+
+/* ===========================
+   Curated Collections
+=========================== */
+
+.collections-section{
+
+    padding:40px 20px;
+
+}
+
+
+/* Section Header */
+
+.section-header{
+
+    text-align:center;
+
+    max-width:700px;
+
+    margin:0 auto 30px;
+
+}
+
+
+.section-tagline{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:12px;
+
+    font-weight:500;
+
+    letter-spacing:.3em;
+
+    text-transform:uppercase;
+
+    color:#B89D87;
+
+}
+
+
+.section-header h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:48px;
+
+    font-weight:400;
+
+    color:#272727;
+
+    margin-bottom:10px;
+
+}
+
+
+.section-header p{
+
+    font-family:"Lora",serif;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#6E675F;
+
+}
+
+
+
+/* Collections Carousel */
+
+.collections-carousel{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    position:relative;
+
+}
+
+
+
+/* Collection Image Hover Effect */
+
+.collection-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+/* Image */
+
+.collection-card img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:transform .6s ease;
+
+}
+
+.collection-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.collection-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(216,210,200,0.35),
+        rgba(248,247,244,0.08)
+    );
+
+    opacity:0;
+
+    transition:.4s ease;
+
+    pointer-events:none;
+
+}
+
+
+.collection-card:hover::after{
+
+    opacity:1;
+
+}
+
+/* Content */
+
+.collection-content{
+
+    padding-top:5px;
+
+}
+
+
+.collection-content h3{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:30px;
+
+    font-weight:400;
+
+    color:#272727;
+
+    margin-bottom:8px;
+
+}
+
+
+.collection-content p{
+
+    font-family:"Lora",serif;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+    color:#C08A5A;
+
+    margin-bottom:18px;
+
+}
+
+
+
+/* Minimal Shop Button */
+
+.collection-content .btn-primary{
+
+    align-self:flex-start;
+
+    margin-top:auto;
+
+    padding:12px 28px;
+
+    background:transparent;
+
+    color:#272727;
+
+    border:1px solid #B89D87;
+
+    border-radius:0;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:12px;
+
+    letter-spacing:.15em;
+
+    text-transform:uppercase;
+
+    text-decoration:none;
+
+    transition:.3s ease;
+
+}
+
+
+.collection-content .btn-primary:hover{
+
+    background:#B89D87;
+
+    color:#ffffff;
+
+}
+
+
+/* Collections Wrapper */
+
+.collections-wrapper{
+    position:relative;
+}
+
+
+/* Back To Top */
+
+.collections-wrapper .back-top{
+
+    position:absolute;
+
+    right:-60px;
+    top:50%;
+    transform:translateY(-50%);
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    border:1px solid rgba(184,157,135,0.5);
+
+    color:#B89D87;
+
+    font-size:18px;
+    text-decoration:none;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+.collections-wrapper .back-top:hover{
+
+    background:#B89D87;
+    color:#F8F7F4;
+
+    transform:translateY(-50%) scale(1.08);
+
+}
+
+
+
+/* =========================
+AFFILIATE DISCLAIMER
+========================= */
+
+.affiliate-disclaimer {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto 80px auto;
+    padding: 0 20px;
+
+    text-align: center;
+
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-style: italic;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #8A837A;
+
+    white-space: normal;
+
+    position: relative;
+}
+
+
+/* Footer Social Icons */
+
+.social-icons {
+    display: flex;
+    gap: 18px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Pinterest */
+.social-icons a:nth-child(1) svg {
+    fill: #E60023;
+}
+
+/* Instagram */
+.social-icons a:nth-child(2) svg {
+    color: #C13584;
+}
+
+/* YouTube */
+.social-icons a:nth-child(3) svg {
+    color: #FF0000;
+}
+
+/* Hover */
+
+.social-icons a:hover svg {
+    transform: scale(1.12);
+    opacity: 0.8;
+}
+/* ===================================
+   Footer
+=================================== */
+
+footer {
+    background-color: #2F2F2F;
+    padding: 90px 0 50px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+
+/* Footer Logo */
+
+.footer-logo h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 44px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: #FAF8F5;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    max-width: 380px;
+    margin: 0 auto;
+
+    font-family: "Lora", serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #D8D2C8;
+}
+
+
+/* Footer Links */
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin: 30px 0;
+}
+
+.footer-links a {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: #FAF8F5;
+
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #B89D87;
+}
+
+
+/* Social */
+
+.footer-social p {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #D8D2C8;
+}
+
+
+/* Social Icons */
+
+.social-icons {
+    justify-content: center;
+}
+
+
+/* Copyright */
+
+.copyright {
+    margin-top: 30px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    color: #B8B1A8;
+}
+
+
+/* ===================================
+   Newsletter Popup
+=================================== */
+
+.newsletter-popup {
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(47,47,47,0.45);
+    backdrop-filter: blur(6px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+
+    z-index: 9999;
+}
+
+/* Active State */
+
+.newsletter-popup.active {
+
+    opacity: 1;
+    visibility: visible;
+
+}
+
+/* Popup Card */
+
+.newsletter-content {
+
+    position: relative;
+
+    width: 90%;
+    max-width: 520px;
+
+    background: #FAF8F5;
+
+    border-radius: 10px;
+
+    padding: 55px 50px;
+
+    text-align: center;
+
+    box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+
+    transform: translateY(20px);
+
+    transition: transform .35s ease;
+
+}
+
+.newsletter-popup.active .newsletter-content {
+
+    transform: translateY(0);
+
+}
+
+/* Logo */
+
+.newsletter-logo img{
+
+    width:90px;
+
+    margin:0 auto 22px;
+
+}
+
+/* Tagline */
+
+.newsletter-tagline{
+
+    font-family:"Inter",sans-serif;
+
+    font-size:12px;
+
+    letter-spacing:.25em;
+
+    text-transform:uppercase;
+
+    color:#B89D87;
+
+    margin-bottom:18px;
+
+}
+
+/* Title */
+
+.newsletter-content h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:46px;
+
+    font-weight:400;
+
+    color:#2F2F2F;
+
+    margin-bottom:18px;
+
+}
+
+/* Description */
+
+.newsletter-text{
+
+    font-family:"Lora",serif;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    color:#6E675F;
+
+    margin-bottom:35px;
+
+}
+
+/* Email */
+
+.newsletter-form input{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border:1px solid #D8D2C8;
+
+    background:#FFFFFF;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:14px;
+
+    margin-bottom:18px;
+
+    outline:none;
+
+}
+
+.newsletter-form input:focus{
+
+    border-color:#B89D87;
+
+}
+
+/* Button */
+
+.newsletter-form button{
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    background:#A98A70;
+
+    color:#FFFFFF;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+}
+
+.newsletter-form button:hover{
+
+    background:#947761;
+
+}
+
+/* Bottom Note */
+
+.newsletter-note{
+
+    margin-top:22px;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:12px;
+
+    color:#8A837A;
+
+}
+
+/* Close */
+
+.close-popup{
+
+    position:absolute;
+
+    top:18px;
+
+    right:20px;
+
+    border:none;
+
+    background:none;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    color:#B89D87;
+
+    transition:.3s ease;
+
+}
+
+.close-popup:hover{
+
+    color:#2F2F2F;
+
+}
+
+/* ==========================================================================
+
+   RESPONSIVE MEDIA QUERIES (Discover Page)
+
+   ========================================================================== */
+
+
+
+/* --------------------------------------------------------------------------
+
+   1. LAPTOPS & LARGE TABLETS (Max-width: 1024px)
+
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+
+
+
+  /* Container Padding */
+
+  .container {
+
+    padding: 0 40px;
+
+  }
+
+
+
+  /* Navigation Spacing */
+
+  nav ul {
+
+    gap: 30px;
+
+  }
+
+
+
+  /* Hero Adjustments */
+
+  .discover-hero {
+
+    height: 60vh;
+
+    margin-top: 60px;
+
+  }
+
+
+
+  .discover-hero-overlay {
+
+    padding: 0 40px;
+
+  }
+
+
+
+  .discover-hero-content {
+
+    width: 100%;
+
+    margin-right: 0;
+
+  }
+
+
+
+  .discover-tagline {
+
+    transform: none;
+
+    margin-bottom: 15px;
+
+    text-align: right;
+
+  }
+
+
+
+  .discover-hero h1 {
+
+    font-size: 54px;
+
+  }
+
+
+
+
+
+ 
+
+  /* Editorial Section Adjustments */
+
+  .editorial-section {
+
+    padding: 40px 20px;
+
+  }
+
+
+
+  .editorial-article {
+
+    gap: 40px;
+
+  }
+
+
+
+  .editorial-article:not(.reverse) .article-content {
+
+    padding-left: 20px;
+
+  }
+
+
+
+  .editorial-article.reverse .article-content {
+
+    padding-right: 20px;
+
+  }
+
+
+
+  .article-content h2 {
+
+    font-size: 30px;
+
+  }
+
+
+
+  /* Curated Collections: 2-Column Grid */
+
+  .collections-carousel {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+  }
+
+
+
+  .collections-wrapper .back-top {
+
+    right: -20px;
+
+  }
+
+}
+
+
+
+
+
+/* --------------------------------------------------------------------------
+
+   2. SMALL TABLETS & MOBILE DEVICES (Max-width: 768px)
+
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+
+
+  /* Global Container Padding */
+
+  .container {
+
+    padding: 0 20px;
+
+  }
+
+
+
+  /* Header & Mobile Menu Stack */
+
+  header {
+
+    height: auto;
+
+  }
+
+
+
+  nav {
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    transform: none;
+
+    padding-top: 15px;
+
+  }
+
+
+
+  nav ul {
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+  }
+
+
+
+  .nav-icons {
+
+    gap: 20px;
+
+  }
+
+
+
+  /* Fixed Mobile Hero Rules */
+
+@media (max-width: 768px) {
+
+
+
+  .discover-hero {
+
+    height: auto;               /* Allows container to grow naturally with text */
+
+    min-height: 380px;
+
+    margin-top: 30px;
+
+  }
+
+
+
+  .discover-hero-overlay {
+
+    padding: 40px 20px;          /* Tighten padding so text has maximum horizontal room */
+
+    justify-content: center;
+
+  }
+
+
+
+  .discover-hero-content {
+
+    width: 100%;                 /* Takes full width on mobile */
+
+    margin-right: 0;             /* Removes the 40px desktop margin */
+
+    transform: none;             /* Removes fixed Y translation */
+
+  }
+
+
+
+  .discover-tagline {
+
+    transform: none;             /* CRITICAL: Clears the desktop translate(90px, 165px) */
+
+    text-align: center;
+
+    white-space: normal;         /* Allows long taglines to wrap if needed */
+
+    margin-bottom: 15px;
+
+  }
+
+
+
+  .discover-hero h1 {
+
+    font-size: 38px;             /* Scaled down to prevent horizontal overflow */
+
+    text-align: center;
+
+    line-height: 1.2;
+
+    margin-bottom: 0;
+
+  }
+
+}
+
+
+
+  /* Editorial Articles: Stack Vertically */
+
+  .editorial-article,
+
+  .editorial-article.reverse {
+
+    flex-direction: column;
+
+    gap: 30px;
+
+  }
+
+
+
+  .article-image {
+
+    width: 100%;
+
+  }
+
+
+
+  .article-image img {
+
+    height: 260px;
+
+  }
+
+
+
+  .article-content,
+
+  .editorial-article:not(.reverse) .article-content,
+
+  .editorial-article.reverse .article-content {
+
+    max-width: 100%;
+
+    padding-left: 0;
+
+    padding-right: 0;
+
+  }
+
+
+
+  .article-content h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 18px;
+
+  }
+
+
+
+  .article-excerpt {
+
+    font-size: 15px;
+
+    margin-bottom: 20px;
+
+  }
+
+
+
+ /* ==========================================================================
+
+   HORIZONTAL PAGINATION LAYOUT
+
+   ========================================================================== */
+
+
+
+.pagination-section {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 40px 20px;
+
+  width: 100%;
+
+}
+
+
+
+.pagination {
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  flex-wrap: nowrap !important;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+}
+
+
+
+/* Page Numbers & Previous/Next Buttons */
+
+.page-number,
+
+.pagination-prev,
+
+.pagination-next,
+
+.pagination a,
+
+.pagination span {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 40px;
+
+  height: 40px;
+
+  padding: 0 12px;
+
+  border: 1px solid #D8D2C8;
+
+  color: #2F2F2F;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+
+  white-space: nowrap;
+
+}
+
+
+
+/* Active Page & Hover States */
+
+.page-number.active,
+
+.pagination .active {
+
+  background-color: #B89D87;
+
+  border-color: #B89D87;
+
+  color: #FFFFFF;
+
+}
+
+
+
+.page-number:hover,
+
+.pagination a:hover {
+
+  border-color: #B89D87;
+
+  color: #B89D87;
+
+}
+
+
+
+/* --------------------------------------------------------------------------
+
+   Mobile Adjustment (Ensures everything fits comfortably on narrow screens)
+
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+  .pagination {
+
+    gap: 6px;
+
+  }
+
+
+
+  .page-number,
+
+  .pagination-prev,
+
+  .pagination-next,
+
+  .pagination a,
+
+  .pagination span {
+
+    min-width: 34px;
+
+    height: 34px;
+
+    padding: 0 8px;
+
+    font-size: 12px;
+
+  }
+
+}
+
+
+
+  /* Curated Collections Section */
+
+  .collections-section {
+
+    padding: 30px 20px;
+
+  }
+
+
+
+  .section-header h2 {
+
+    font-size: 36px;
+
+  }
+
+
+
+  /* Collections Carousel: 1 Column on Mobile */
+
+  .collections-carousel {
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+  }
+
+
+
+  .collection-card img {
+
+    height: 380px;
+
+  }
+
+
+
+  /* Back to Top Repositioning */
+
+  .collections-wrapper .back-top {
+
+    position: relative;
+
+    right: auto;
+
+    top: auto;
+
+    margin: 30px auto 0 auto;
+
+    transform: none;
+
+  }
+
+
+
+  .collections-wrapper .back-top:hover {
+
+    transform: scale(1.08);
+
+  }
+
+
+
+  /* Footer Adjustments */
+
+  footer {
+
+    padding: 60px 20px 40px;
+
+    margin-top: 50px;
+
+  }
+
+
+
+  .footer-links {
+
+    flex-direction: column;
+
+    gap: 14px;
+
+  }
+
+
+
+  /* Newsletter Popup */
+
+  .newsletter-content {
+
+    padding: 40px 20px;
+
+  }
+
+
+
+  .newsletter-content h2 {
+
+    font-size: 34px;
+
+  }
+
+}
+
+
+
+
+
+/* --------------------------------------------------------------------------
+
+   3. EXTRA SMALL MOBILE SCREENS (Max-width: 480px)
+
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+
+
+  .logo a {
+
+    font-size: 36px;
+
+  }
+
+
+
+  .discover-hero h1 {
+
+    font-size: 32px;
+
+  }
+
+
+
+  .article-content h2 {
+
+    font-size: 24px;
+
+  }
+
+
+
+  .section-header h2 {
+
+    font-size: 30px;
+
+  }
+
+
+
+  .collection-card img {
+
+    height: 300px;
+
+  }
+
+} 
+

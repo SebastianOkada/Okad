@@ -1,0 +1,1033 @@
+/* ==========================================================================
+   OKAD — ARTICLE PAGE CSS (COMPLETE & CORRECTED)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Base & Global Reset
+   -------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FAF8F5;
+  color: #2F2F2F;
+  font-family: "Lora", serif;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Header & Navigation
+   -------------------------------------------------------------------------- */
+header {
+  height: 65px;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: #FAF8F5;
+}
+
+nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(20px);
+  position: relative;
+  z-index: 1000;
+}
+
+.logo a {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #2F2F2F;
+}
+
+nav ul {
+  display: flex;
+  gap: 55px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 30px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: #FAF8F5;
+  padding: 25px 35px;
+  min-width: 220px;
+  display: none;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+}
+
+.dropdown a {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #2F2F2F;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.dropdown a:hover {
+  color: #B89D87;
+}
+
+.nav-item:hover .dropdown {
+  display: flex;
+}
+
+nav ul a {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: #2F2F2F;
+  text-transform: uppercase;
+}
+
+nav ul a:hover {
+  color: #B89D87;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-icons a {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+}
+
+.nav-icons svg {
+  width: 22px;
+  height: 22px;
+  stroke: #2F2F2F;
+  transition: 0.3s ease;
+}
+
+.nav-icons a:hover svg {
+  stroke: #B89D87;
+}
+
+/* --------------------------------------------------------------------------
+   3. Article Content Wrapper & Actions
+   -------------------------------------------------------------------------- */
+.article-content-item {
+  display: block; /* Remove !important */
+  width: 100%;
+}
+
+.article-actions {
+  position: fixed;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 1000;
+}
+
+.article-action {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(184, 157, 135, 0.45);
+  border-radius: 50%;
+  background: #FAF8F5;
+  color: #B89D87;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.article-action:hover {
+  color: #947761;
+  border-color: #B89D87;
+}
+
+/* --------------------------------------------------------------------------
+   4. Article Intro & Disclaimer
+   -------------------------------------------------------------------------- */
+.affiliate-disclaimer {
+  width: 100%;
+  max-width: 680px;
+  margin: 30px auto 40px auto;
+  padding: 0 20px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-style: italic;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #8A837A;
+}
+
+.article-intro {
+  max-width: 850px;
+  margin: 40px auto 35px;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.article-intro h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 58px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #2F2F2F;
+  margin: 0 0 25px;
+}
+
+.article-introduction {
+  font-family: "Lora", serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #55504A;
+  max-width: 650px;
+  margin: 0 auto 25px;
+}
+
+.article-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.article-meta p {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #B89D87;
+}
+
+.article-category::after {
+  content: "•";
+  margin-left: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   5. Main Article Text
+   -------------------------------------------------------------------------- */
+.article-text {
+  max-width: 680px;
+  margin: 0 auto 55px;
+  padding: 0 25px;
+}
+
+.article-text h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 38px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0 0 28px;
+}
+
+.article-text p {
+  font-family: "Lora", serif;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #555;
+  margin: 0 0 22px;
+}
+
+.article-text + .article-text {
+  margin: 0 auto 35px;
+}
+
+
+.article-text a {
+    color: #A6533B;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: all 0.25s ease;
+}
+
+.article-text a:hover {
+    opacity: 0.7;
+    text-underline-offset: 5px;
+}
+
+.article-text h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #5A3828;
+    margin: 25px 0 10px;
+    letter-spacing: 0.3px;
+}
+/* --------------------------------------------------------------------------
+   6. Halloween Sections & Media (STRICT 9:16 ASPECT RATIO)
+   -------------------------------------------------------------------------- */
+.halloween-section {
+  max-width: 680px;
+  margin: 0 auto 60px;
+  padding: 0 25px;
+}
+
+.halloween-content h2 {
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #2F2F2F;
+  margin: 25px auto 15px;
+  max-width: 90%;
+}
+
+.halloween-content p {
+  font-family: "Lora", serif;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #555;
+  margin: 0 0 22px;
+}
+
+/* 9:16 Image Containers */
+.article-hero,
+.halloween-image,
+.article-feature-image,
+.collage-image,
+.gallery-image {
+  max-width: 420px !important;
+  margin: 0 auto 30px !important;
+  overflow: hidden;
+}
+
+/* Force exact 9:16 Aspect Ratio across all image tags */
+.article-hero img,
+.halloween-image img,
+.article-feature-image img,
+.collage-image img,
+.gallery-image img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 9 / 16 !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+
+/* =========================
+   ARTICLE HERO — 2.13:1
+   ========================= */
+
+.article-hero {
+    position: relative;
+    width: 100%;
+    max-width: none !important;
+    margin: 0 auto 30px !important;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.article-hero img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 2.13 / 1 !important;
+    object-fit: cover !important;
+}
+
+.article-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(248, 241, 232, 0.12);
+    z-index: 1;
+}
+/* --------------------------------------------------------------------------
+   7. Article Image Collage & Gallery Grids
+   -------------------------------------------------------------------------- */
+.article-collage {
+  max-width: 850px;
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  padding: 0 25px;
+}
+
+.article-collage .collage-image {
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+.article-gallery {
+  max-width: 900px;
+  margin: 0 auto 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 25px;
+}
+
+.article-gallery .gallery-image {
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   8. Product Showcase Section (Inspired By This Article)
+   -------------------------------------------------------------------------- */
+.article-styles {
+  max-width: 600px;
+  margin: 80px auto 90px;
+  padding: 28px 28px 25px;
+  border: 1px solid #D8D2C8;
+  background: #FAF8F5;
+}
+
+.styles-heading {
+  text-align: left;
+  margin-bottom: 28px;
+}
+
+.styles-heading h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: #2F2F2F;
+  margin: 0 0 6px;
+}
+
+.styles-heading p {
+  font-family: "Lora", serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #77716B;
+  margin: 0;
+}
+
+.style-products {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.style-product {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.product-info img {
+  width: 95px;
+  height: 95px;
+  object-fit: cover;
+  flex-shrink: 0;
+  aspect-ratio: 1 / 1 !important;
+}
+
+.product-details {
+  padding-top: 8px;
+}
+
+.product-details h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #2F2F2F;
+  margin: 0 0 7px;
+}
+
+.product-details p {
+  font-family: "Lora", serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #6B655F;
+  margin: 0;
+  max-width: 430px;
+}
+
+.view-product {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 13px;
+  padding: 10px 15px;
+  border: none;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #B89D87;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.view-product:hover {
+  background: #7F624C;
+  color: #FFFFFF;
+}
+
+.extra-product {
+  display: none;
+}
+
+.styles-toggle {
+  display: block;
+  margin: 28px auto 0;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #B89D87;
+  background: none;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #947761;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   9. OKAD Note & Related Articles
+   -------------------------------------------------------------------------- */
+.okad-note {
+  max-width: 650px;
+  margin: 0 auto 35px;
+  padding: 55px 30px;
+  text-align: center;
+  border-top: 1px solid #D8D2C8;
+  border-bottom: 1px solid #D8D2C8;
+}
+
+.okad-note h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin: 0 0 20px;
+}
+
+.okad-note p {
+  font-family: "Lora", serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+  margin: 0;
+}
+
+.back-to-discover {
+  text-align: center;
+  margin: 0 auto 60px;
+}
+
+.back-to-discover a {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #B89D87;
+  text-decoration: none;
+}
+
+.back-to-discover a:hover {
+  color: #947761;
+}
+
+.related-articles {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto 45px;
+  padding: 0 25px;
+}
+
+.related-articles > h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.related-image {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.related-image img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  aspect-ratio: auto !important;
+}
+
+.related-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(216, 185, 154, 0.45);
+  color: #272727;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.related-image:hover img {
+  transform: scale(1.06);
+}
+
+.related-image:hover .related-overlay {
+  opacity: 1;
+}
+
+.related-category {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #B89D87;
+  margin: 18px 0 8px;
+}
+
+.related-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 15px;
+}
+
+.related-card a {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #272727;
+  text-decoration: none;
+}
+
+.related-card a:hover {
+  color: #B89D87;
+}
+
+.related-articles .back-top {
+  position: absolute;
+  right: -60px;
+  top: 60%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(184, 157, 135, 0.5);
+  color: #B89D87;
+  font-size: 18px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.related-articles .back-top:hover {
+  background-color: #B89D87;
+  color: #FAF8F5;
+  transform: translateY(-50%) scale(1.08);
+}
+
+
+
+/* ==============================
+   ARTICLE SWITCHING
+============================== */
+
+.article-content-item {
+    display: none;
+}
+
+.article-content-item.active {
+    display: block;
+}
+
+/* Hide all articles by default */
+.article-content-item {
+    display: none;
+}
+
+/* Show only the selected article */
+.article-content-item.active {
+    display: block;
+}
+
+
+
+/* --------------------------------------------------------------------------
+   10. Footer & Newsletter Popup
+   -------------------------------------------------------------------------- */
+footer {
+  background-color: #2F2F2F;
+  padding: 90px 0 50px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.footer-logo h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 44px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #FAF8F5;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  max-width: 380px;
+  margin: 0 auto;
+  font-family: "Lora", serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #D8D2C8;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin: 30px 0;
+}
+
+.footer-links a {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FAF8F5;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #B89D87;
+}
+
+.social-icons {
+  display: flex;
+  gap: 18px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.social-icons svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icons a:nth-child(1) svg { fill: #E60023; }
+.social-icons a:nth-child(2) svg { color: #C13584; }
+.social-icons a:nth-child(3) svg { color: #FF0000; }
+
+.social-icons a:hover svg {
+  transform: scale(1.12);
+  opacity: 0.8;
+}
+
+.copyright {
+  margin-top: 30px;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  color: #B8B1A8;
+}
+
+/* Newsletter Modal */
+.newsletter-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(47, 47, 47, 0.45);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  z-index: 9999;
+}
+
+.newsletter-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.newsletter-content {
+  position: relative;
+  width: 90%;
+  max-width: 520px;
+  background: #FAF8F5;
+  border-radius: 10px;
+  padding: 55px 50px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+  transform: translateY(20px);
+  transition: transform 0.35s ease;
+}
+
+.newsletter-popup.active .newsletter-content {
+  transform: translateY(0);
+}
+
+.newsletter-logo img {
+  width: 90px;
+  margin: 0 auto 22px;
+}
+
+.newsletter-tagline {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #B89D87;
+  margin-bottom: 18px;
+}
+
+.newsletter-content h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 46px;
+  font-weight: 400;
+  color: #2F2F2F;
+  margin-bottom: 18px;
+}
+
+.newsletter-text {
+  font-family: "Lora", serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6E675F;
+  margin-bottom: 35px;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 16px 18px;
+  border: 1px solid #D8D2C8;
+  background: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  margin-bottom: 18px;
+  outline: none;
+}
+
+.newsletter-form input:focus {
+  border-color: #B89D87;
+}
+
+.newsletter-form button {
+  width: 100%;
+  height: 56px;
+  border: none;
+  background: #A98A70;
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #947761;
+}
+
+.newsletter-note {
+  margin-top: 22px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  color: #8A837A;
+}
+
+.close-popup {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  border: none;
+  background: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #B89D87;
+  transition: 0.3s ease;
+}
+
+.close-popup:hover {
+  color: #2F2F2F;
+}
+
+/* --------------------------------------------------------------------------
+   11. Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 40px;
+  }
+  .related-articles .back-top {
+    right: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 30px;
+  }
+  .article-intro {
+    margin-top: 60px;
+  }
+  .article-intro h1 {
+    font-size: 48px;
+  }
+  .article-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .article-actions {
+    left: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  header {
+    height: auto;
+  }
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    transform: none;
+    padding: 15px 0;
+  }
+  .logo a {
+    font-size: 38px;
+  }
+  nav ul {
+    gap: 18px;
+    justify-content: center;
+  }
+  .article-actions {
+    display: none;
+  }
+  .article-intro {
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+  .article-intro h1 {
+    font-size: 38px;
+  }
+  .article-text,
+  .halloween-section {
+    padding: 0 20px;
+  }
+  .article-collage {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .article-gallery {
+    grid-template-columns: 1fr;
+  }
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo a {
+    font-size: 36px;
+  }
+  .article-intro h1 {
+    font-size: 32px;
+  }
+  .article-text h2,
+  .halloween-content h2 {
+    font-size: 26px;
+  }
+}
+
+
+.article-content-item p,
+.article-content-item h2,
+.article-content-item h3,
+.article-text p,
+.okad-note h2,
+.okad-note p {
+    text-align: center !important;
+}
+
+.article-content-item h2,
+.article-content-item h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center !important;
+}
