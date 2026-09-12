@@ -28,7 +28,7 @@ popup.addEventListener("click", function (e) {
 
 
 
-// Search Box
+/* // Search Box
 
 const searchBtn = document.getElementById("search-btn");
 const searchOverlay = document.querySelector(".search-overlay");
@@ -132,4 +132,4 @@ searchInput.addEventListener("input", async function() {
 
     }
 
-});
+});           */
