@@ -164,6 +164,56 @@ nav a:hover {
 .nav-icons a:hover svg {
     stroke: #B89D87;
 }
+
+
+
+/* Search Overlay */
+
+.search-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(250, 248, 245, 0.97);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.search-overlay.active {
+    display: flex;
+}
+
+.search-container {
+    width: min(700px, 90%);
+    position: relative;
+}
+
+.search-container form {
+    width: 100%;
+}
+
+.search-container input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #2F2F2F;
+    background: transparent;
+    padding: 15px 45px 15px 5px;
+    font-family: "Lora", serif;
+    font-size: 24px;
+    color: #2F2F2F;
+    outline: none;
+}
+
+.close-search {
+    position: absolute;
+    top: -55px;
+    right: 0;
+    border: none;
+    background: none;
+    font-size: 30px;
+    color: #2F2F2F;
+    cursor: pointer;
+}
 /* ===========================
    Hero Section
 =========================== */
