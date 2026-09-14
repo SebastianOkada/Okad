@@ -1582,36 +1582,6 @@ articles.forEach(article => {
 
 <script>
 
-/* =========================
-SAVE ARTICLE
-========================= */
-
-const saveButton = document.getElementById("save-article");
-
-if (saveButton) {
-
-    if (localStorage.getItem("okad-saved-article") === "true") {
-        saveButton.classList.add("saved");
-    }
-
-    saveButton.addEventListener("click", function () {
-
-        if (localStorage.getItem("okad-saved-article") === "true") {
-
-            localStorage.removeItem("okad-saved-article");
-            saveButton.classList.remove("saved");
-
-        } else {
-
-            localStorage.setItem("okad-saved-article", "true");
-            saveButton.classList.add("saved");
-
-        }
-
-    });
-
-}
-
 
 /* =========================
 SHARE ARTICLE

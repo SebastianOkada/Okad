@@ -215,6 +215,9 @@ STICKY ARTICLE ACTIONS
     border-color: #B89D87;
 }
 
+.article-action.saved {
+    color: #A6533B;
+}
 
 /* =========================
 ARTICLE INTRO
