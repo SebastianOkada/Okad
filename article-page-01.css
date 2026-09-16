@@ -326,26 +326,38 @@ ARTICLE IMAGE COLLAGE
 ========================= */
 
 .article-collage{
-    max-width:850px;
+
+    max-width:425px;
+
     margin:0 auto 35px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
+
+    display:flex;
+
+    justify-content:center;
+
 }
 
 .collage-image{
+
+    width:100%;
+
     overflow:visible;
+
     text-align:center;
+
 }
 
 .collage-image img{
+
     width:100%;
+
     aspect-ratio:9 / 16;
+
     object-fit:cover;
+
     display:block;
+
 }
-
-
 
  /* =========================
  ARTICLE TEXT
