@@ -664,110 +664,6 @@ section {
     background: #B89D87;
     color: #FAF8F5;
 }
-/* ===================================
-   Journal Section
-=================================== */
-
-.latest-journal {
-    text-align: center;
-    padding-top: 20px;
-}
-.latest-journal h2 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 54px;
-    font-weight: 400;
-    line-height: 1.1;
-    color: #A98A70;
-    text-transform: uppercase;
-    margin-bottom: 50px;
-}
-/* Journal Grid */
-
-.journal-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-    margin-top: 50px;
-}
-
-/* Journal Card */
-
-.journal-card {
-    text-align: left;
-}
-
-/* Journal Image */
-
-.journal-card img {
-    width: 100%;
-    height: 360px;
-    object-fit: cover;
-    border-radius: 6px;
-
-    transition:
-        transform 0.6s ease,
-        filter 0.6s ease;
-}
-
-/* Image Hover */
-
-.journal-card:hover img {
-    transform: scale(1.04);
-    filter: brightness(1.05);
-}
-
-/* Article Title */
-
-.journal-card h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-
-    font-family: "Cormorant Garamond", serif;
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 1.3;
-    color: #2F2F2F;
-}
-
-/* Date */
-
-.journal-card p {
-    margin-bottom: 15px;
-
-    font-family: "Inter", sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #B89D87;
-}
-/* Read Article */
-
-.journal-card a {
-    display: inline-block;
-
-    font-family: "Inter", sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-
-    color: #2F2F2F;
-
-    border-bottom: 1px solid transparent;
-
-    transition: border-color 0.3s ease;
-}
-
-.journal-card a:hover {
-    border-color: #2F2F2F;
-}
-
-
-
-
-.journal-card {
-    cursor: pointer;
-}
 
 
 
@@ -1135,6 +1031,131 @@ section {
     line-height: 1.6;
 }
 
+
+/* ===================================
+   Related Articles
+=================================== */
+
+.related-articles {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto 45px;
+    padding: 0 25px;
+}
+
+.related-articles > h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 0 40px;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.related-image {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.related-image img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    aspect-ratio: auto !important;
+}
+
+.related-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(216, 185, 154, 0.45);
+    color: #272727;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.related-image:hover img {
+    transform: scale(1.06);
+}
+
+.related-image:hover .related-overlay {
+    opacity: 1;
+}
+
+.related-category {
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #B89D87;
+    margin: 18px 0 8px;
+}
+
+.related-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 15px;
+}
+
+.related-card a {
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #272727;
+    text-decoration: none;
+}
+
+.related-card a:hover {
+    color: #B89D87;
+}
+
+.related-articles .back-top {
+    position: absolute;
+    right: -60px;
+    top: 60%;
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(184, 157, 135, 0.5);
+
+    color: #B89D87;
+
+    font-size: 18px;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.related-articles .back-top:hover {
+    background-color: #B89D87;
+    color: #FAF8F5;
+
+    transform: translateY(-50%) scale(1.08);
+}
 /* ===================================
    Newsletter Popup
 =================================== */
@@ -1439,19 +1460,6 @@ nav ul li.active > a {
     width: 90%;
   }
 
-  /* Journal Grid: 3 Columns tight gap */
-  .journal-grid {
-    gap: 20px;
-  }
-
-  .journal-card img,
-  .journal-image img {
-    height: 280px;
-  }
-
-  .journal-card h3 {
-    font-size: 24px;
-  }
 
   /* Back to Top floating position */
   .back-top {
@@ -1552,7 +1560,7 @@ nav ul li.active > a {
   /* Section Titles */
   .categories h2,
   .featured-collections h2,
-  .latest-journal h2 {
+  .related-articles > h2 {
     font-size: 38px;
     margin-bottom: 30px;
   }
@@ -1569,29 +1577,6 @@ nav ul li.active > a {
 
   .collection-image {
     width: 85%;
-  }
-
-  /* Journal Grid: 1 Column on Mobile */
-  .journal-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .journal-card img,
-  .journal-image img {
-    height: 260px;
-  }
-
-  /* Read Overlay - Touch Friendly */
-  .read-overlay {
-    opacity: 1;
-    top: auto;
-    bottom: 15px;
-    transform: translateX(-50%);
-  }
-
-  .journal-image:hover .read-overlay {
-    transform: translateX(-50%);
   }
 
   /* Back to Top Repositioning */
@@ -1658,7 +1643,7 @@ nav ul li.active > a {
 
   .categories h2,
   .featured-collections h2,
-  .latest-journal h2 {
+   .related-articles > h2 {
     font-size: 30px;
   }
 
@@ -1666,3 +1651,5 @@ nav ul li.active > a {
     width: 100%;
   }
 }
+
+
