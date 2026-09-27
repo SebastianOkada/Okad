@@ -391,18 +391,56 @@ nav ul a:hover {
 /* --------------------------------------------------------------------------
    7. Article Image Collage & Gallery Grids
    -------------------------------------------------------------------------- */
+
 .article-collage {
-  max-width: 850px;
-  margin: 0 auto 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-  padding: 0 25px;
+    max-width: 1100px;
+    margin: 0 auto 60px;
+    padding: 0 25px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .article-collage .collage-image {
-  max-width: 100% !important;
-  margin: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+}
+
+.article-collage .collage-image img {
+    width: 100% !important;
+    height: auto !important;
+
+    aspect-ratio: 9 / 16 !important;
+    object-fit: cover !important;
+
+    display: block !important;
+}
+
+
+/* Single Image Inside Collage */
+
+.article-collage .collage-image:only-child {
+    max-width: 420px !important;
+    margin: 0 auto !important;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .article-collage {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .article-collage .collage-image {
+        max-width: 420px !important;
+        width: 100%;
+        margin: 0 auto !important;
+    }
+
 }
 
 .article-gallery {
@@ -601,6 +639,7 @@ PINTEREST SAVE BUTTON
     height: 13px; 
   } 
 }
+
 /* --------------------------------------------------------------------------
    9. OKAD Note & Related Articles
    -------------------------------------------------------------------------- */
