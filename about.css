@@ -257,58 +257,65 @@ nav a:hover {
    Why OKAD
 ========================= */
 
-.about-intro{
+.why-okad{
 
-    padding:100px 20px;
-
-}
-
-.about-intro-container{
-
-    max-width:850px;
+    max-width:900px;
 
     margin:0 auto;
+
+    padding:100px 20px 110px;
 
     text-align:center;
 
 }
 
-.about-tagline{
+.why-okad h2{
 
-    font-family:"Inter", sans-serif;
+    margin:0 0 42px;
 
-    font-size:14px;
+    font-family:"Cormorant Garamond", serif;
 
-    font-weight:600;
+    font-size:42px;
 
-    letter-spacing:0.35em;
+    line-height:1.2;
 
-    text-transform:uppercase;
+    font-weight:500;
 
-    color:#B89D87;
-
-    margin-bottom:30px;
+    color:#2F2F2F;
 
 }
 
-.about-description{
+.why-okad p{
+
+    margin:0 auto 28px;
 
     font-family:"Lora", serif;
 
-    font-size:22px;
+    font-size:20px;
 
-    line-height:1.9;
+    line-height:1.85;
 
-    color:#272727;
-
-}
-
-.about-description strong{
-
-    font-weight:600;
+    color:#2F2F2F;
 
 }
 
+.why-okad p:last-child{
+
+    margin-top:48px;
+
+    margin-bottom:0;
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:30px;
+
+    line-height:1.4;
+
+    font-weight:500;
+
+    color:#8F725D;
+
+}
 
 
 

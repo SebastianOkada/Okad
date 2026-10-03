@@ -255,131 +255,96 @@ body {
 
 
 /* ==========================================================================
-   3. CONTACT DETAILS SECTION (Outer Thin Box + Bold Headings)
-   ========================================================================== */
+3. CONTACT DETAILS SECTION (Outer Thin Box + Bold Headings)
+========================================================================== */
 .contact-details {
-  display: flex;
-  border: 1px solid var(--border-light); /* Enclosing outer thin box */
-  background-color: #FAF8F5;
-  margin-bottom: 60px;
-  box-sizing: border-box;
+display: flex;
+border: 1px solid var(--border-light); /* Enclosing outer thin box */
+background-color: #FAF8F5;
+margin-bottom: 60px;
+box-sizing: border-box;
 }
 
-/* Left Box: Form */
+/* Left Box: Contact Message */
 .contact-form-box {
-  flex: 1;
-  padding: 50px 45px 50px 50px;
+flex: 1;
+padding: 50px 45px 50px 50px;
 }
 
 /* Right Box: Info (Separator line sits precisely in the middle) */
 .contact-info-box {
-  flex: 1;
-  padding: 50px 40px 50px 55px;
-  border-left: 1px solid var(--border-light);
-  display: flex;
-  flex-direction: column;
+flex: 1;
+padding: 50px 40px 50px 55px;
+border-left: 1px solid var(--border-light);
+display: flex;
+flex-direction: column;
 }
 
 /* Bold Headings */
 .contact-form-box h2,
 .contact-info-box h2 {
+font-family: var(--font-serif);
+font-size: 1.8rem;
+font-weight: 600;
+color: var(--heading-accent);
+margin: 0 0 30px 0;
+}
+
+/* Contact Message */
+.contact-form-box p {
+  margin: 0 0 22px 0;
   font-family: var(--font-serif);
-  font-size: 1.8rem;
-  font-weight: 600; /* Bold weight */
-  color: var(--heading-accent);
-  margin: 0 0 30px 0;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #2F2F2F;
 }
 
-/* Form Styling */
-.contact-form-box form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.contact-form-box input,
-.contact-form-box textarea {
-  width: 100%;
-  padding: 14px 16px;
-  background-color: transparent;
-  border: 1px solid var(--border-light);
-  border-radius: 0;
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  color: var(--text-dark);
-  box-sizing: border-box;
-  outline: none;
-}
-
-.contact-form-box input:focus,
-.contact-form-box textarea:focus {
-  border-color: var(--text-dark);
-}
-
-.contact-form-box textarea {
-  height: 130px;
-  resize: none;
-}
-
-.contact-form-box button {
-  margin-top: 10px;
-  padding: 16px;
-  background-color: var(--button-bg);
-  color: var(--button-text);
-  border: none;
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-}
-
-.contact-form-box button:hover {
-  opacity: 0.9;
+.contact-form-box p:last-child {
+  margin-bottom: 0;
 }
 
 /* Info Items & Soft Icons */
 .contact-item {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 24px;
+display: flex;
+align-items: center;
+gap: 20px;
+margin-bottom: 24px;
 }
 
 .contact-item i.contact-icon-soft {
-  font-size: 1.1rem;
-  color: #726C66;
-  opacity: 0.75;
-  width: 24px;
-  text-align: center;
-  flex-shrink: 0;
-  display: inline-block;
-  line-height: 1;
-  transition: opacity 0.2s ease, color 0.2s ease;
+font-size: 1.1rem;
+color: #726C66;
+opacity: 0.75;
+width: 24px;
+text-align: center;
+flex-shrink: 0;
+display: inline-block;
+line-height: 1;
+transition: opacity 0.2s ease, color 0.2s ease;
 }
 
 .contact-item:hover i.contact-icon-soft {
-  color: var(--text-dark);
-  opacity: 1;
+color: var(--text-dark);
+opacity: 1;
 }
 
 /* Clickable Links with Hover Effect */
 .contact-item a.contact-link {
-  color: var(--text-dark);
-  text-decoration: none;
-  transition: color 0.2s ease;
-  cursor: pointer;
+color: var(--text-dark);
+text-decoration: none;
+transition: color 0.2s ease;
+cursor: pointer;
 }
 
 .contact-item a.contact-link:hover {
-  color: var(--button-bg); /* Style guide taupe hover */
+color: var(--button-bg);
 }
 
 .contact-item p {
-  margin: 0;
-  font-size: 0.92rem;
-  line-height: 1.5;
-  color: var(--text-dark);
+margin: 0;
+font-size: 0.92rem;
+line-height: 1.5;
+color: var(--text-dark);
 }
 
 
